@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/error.css" />
   </head>
   <body class="page">
+    <!-- Весь контент -->
     <main class="content">
       <section class="result">
         <div class="result__video-container">
@@ -29,6 +30,7 @@
               />
             </label>
           </fieldset>
+
           <fieldset class="search-form__fieldset">
             <h2 class="search-form__fieldset-title">Время суток</h2>
             <div class="search-form__checkbox-list">
@@ -64,11 +66,13 @@
               </label>
             </div>
           </fieldset>
+
           <button type="submit" class="button search-form__submit-button">
             Найти
           </button>
         </form>
       </section>
+
       <section class="content__details">
         <h1 class="title">
           <span class="content__accent">По-</span><br />смотри<br />в окно
@@ -80,7 +84,7 @@
     </main>
 
     <!-- ТЕМПЛЕЙТЫ -->
-
+    <!-- Шаблон прелоадера -->
     <template class="preloader-template">
       <div class="preloader">
         <div class="preloader-chasing-squares">
@@ -92,6 +96,7 @@
       </div>
     </template>
 
+    <!-- Список с карточками видео -->
     <template class="cards-list-item-template">
       <li class="content__list-item">
         <a href="#0" class="content__card-link">
@@ -105,15 +110,19 @@
         </a>
       </li>
     </template>
+
+    <!-- Шаблон кнопки показать еще, входит в шаблон "Список с карточками" -->
     <template class="more-button-template">
       <li><button class="button more-button">Показать еще</button></li>
     </template>
 
+    <!-- Шаблон блока с ошибкой -->
     <template class="error-template">
       <div class="error">
         <h2 class="error__title"></h2>
       </div>
     </template>
+
     <script src="./scripts/script.js"></script>
   </body>
 </html>
