@@ -19,6 +19,8 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -38,7 +40,6 @@ fieldset {
   align-items: flex-end;
   gap: 32px;
   padding: 0 30px;
-  margin-top: 133px;
 }
 
 .result__video-container {
