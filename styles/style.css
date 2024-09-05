@@ -26,7 +26,6 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  padding-top: 133px;
 }
 
 fieldset {
@@ -39,6 +38,7 @@ fieldset {
   align-items: flex-end;
   gap: 32px;
   padding: 0 30px;
+  margin-top: 133px;
 }
 
 .result__video-container {
