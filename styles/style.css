@@ -38,15 +38,15 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 32px;
+  gap: 30px;
   padding: 0 30px;
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
+  inline-size: 711px;
   height: 386px;
-  margin-bottom: 16px;
+  margin-block-end: 16px;
 }
 
 .result__video {
@@ -72,11 +72,11 @@ fieldset {
   border: none;
   padding: 0;
   margin: 0;
-
   font: inherit;
   color: #fff;
-  width: 225px;
-  height: 30px;
+  min-width: 225px;
+  width: 100%;
+  padding: 2px 0;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
@@ -90,15 +90,7 @@ fieldset {
 }
 
 .search-form__textfield:active {
-  border-top: none;
-  border-bottom: none;
   border: 1px solid #fff;
-}
-
-.search-form__label {
-  display: block;
-  position: relative;
-  padding: 1px;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -110,7 +102,7 @@ fieldset {
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: 1.2;
   margin-bottom: 5px;
 }
 
@@ -124,6 +116,8 @@ fieldset {
 }
 
 .search-form__label {
+  position: relative;
+  padding: 1px;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -197,7 +191,7 @@ fieldset {
 }
 
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
@@ -206,18 +200,18 @@ fieldset {
   padding-top: 2px;
 }
 
-.title .content__accent {
+.content__accent {
   color: #545050;
 }
 
 .content__list {
-  display: flex;
-  flex-direction: column;
-  gap: 23px;
   position: relative;
-  overflow: hidden;
   height: 298px;
   overflow-y: auto;
+}
+
+.content__list > *:not(:last-child) {
+  margin-bottom: 23px;
 }
 
 .content__card-link {
@@ -232,7 +226,7 @@ fieldset {
 }
 
 .content__card-link:focus-visible {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
 }
 
 .content__card-link:hover {
@@ -245,7 +239,10 @@ fieldset {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
@@ -291,9 +288,4 @@ fieldset {
 ul,
 ol {
   list-style: none;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
 }
